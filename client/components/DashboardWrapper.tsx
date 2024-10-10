@@ -50,7 +50,10 @@ function DashboardLayout({
 
   // Helper function to read a cookie by its name
 function getCookie(name: string) {
+  if (typeof document === 'undefined') return undefined;
+
   const value = `; ${document.cookie}`;
+  if (!value) return undefined;
   const parts = value.split(`; ${name}=`);
   if (parts.length === 2) return parts.pop()?.split(';').shift();
 }

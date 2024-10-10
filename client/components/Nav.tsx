@@ -8,7 +8,6 @@ import { Button } from "./ui/button";
 import { ScrollArea } from "./ui/scroll-area";
 import { Home, Settings, User, Users, Calendar, FolderOpen, ChevronDown, ChevronRight, AlertCircle } from "lucide-react"
 import { usePathname } from 'next/navigation';
-import { hrtime } from "process";
 
 const menuItems = [
   { href: "/", icon: Home, label: "Home" },
@@ -32,10 +31,10 @@ const menuItems = [
   icon:AlertCircle,
   label:"priority",
   subMenu: [
-    {href: "/priority/urgent", label: "Urgent Priority"},
-    { href: "/priority/high", label: "High Priority" },
-    { href: "/priority/medium", label: "Medium Priority" },
-    { href: "/priority/low", label: "Low Priority" },
+    {href: "/priority/urgent", label: "Urgent"},
+    { href: "/priority/high", label: "High" },
+    { href: "/priority/medium", label: "Medium" },
+    { href: "/priority/low", label: "Low" },
     {href:"/priority/backlog",label:"backlog"}
   ]
 }
